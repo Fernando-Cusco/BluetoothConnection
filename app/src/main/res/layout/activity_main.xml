@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Device"
+        android:id="@+id/txtMAC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20:17:11:16:80:63"
+        android:id="@+id/edtMAC"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMAC"
+        app:layout_constraintLeft_toRightOf="@+id/txtMAC"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnConnectar"
+        android:text="Conectar"
+        app:layout_constraintTop_toBottomOf="@+id/txtMAC"
+        app:layout_constraintLeft_toLeftOf="@+id/txtMAC"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnListar"
+        android:text="Listar"
+        app:layout_constraintTop_toBottomOf="@+id/txtMAC"
+        app:layout_constraintRight_toLeftOf="@+id/btnConnectar"
+        />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lstDevices"
+        app:layout_constraintTop_toBottomOf="@+id/btnListar"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Enviar"
+        app:layout_constraintStart_toEndOf="@+id/btnConnectar"
+        app:layout_constraintTop_toBottomOf="@+id/edtMAC" />
+
+</android.support.constraint.ConstraintLayout>
